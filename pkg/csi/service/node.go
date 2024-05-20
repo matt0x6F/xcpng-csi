@@ -75,7 +75,9 @@ func (s *service) NodeStageVolume(ctx context.Context, req *csi.NodeStageVolumeR
 			fmt.Sprintf("Error when mounting Device: %s, Path: %s, FSType: %s, Error: %v", device, stagingTargetPath, params.FSType, err),
 		)
 	}
+
 	log.Infof("Mounted Device: [%s] to General Path: (%s)", device, stagingTargetPath)
+
 	return &csi.NodeStageVolumeResponse{}, nil
 }
 
@@ -136,6 +138,7 @@ func (s *service) NodePublishVolume(ctx context.Context, req *csi.NodePublishVol
 	}
 
 	log.Infof("Bind Mounted Volume: (%s) to Path: (%s)", stagingTargetPath, targetPath)
+
 	return &csi.NodePublishVolumeResponse{}, nil
 }
 

@@ -16,7 +16,7 @@ import (
 
 const (
 	// Name driver base
-	Name = "csi.xcpng.ar2ro.io"
+	Name = "csi.xcpng.ooo-yay.com"
 	// VendorVersion is DriverVersion
 	VendorVersion = "1.1.0"
 	// UnixSocketPrefix is the CSI Socket path
@@ -34,7 +34,7 @@ const (
 
 // Manifest contains information about the CSI Driver
 var Manifest = map[string]string{
-	"url": "https://github.com/arturoguerra/kube-xcpng-csi",
+	"url": "https://github.com/matt0x6f/xcpng-csi",
 }
 
 var (

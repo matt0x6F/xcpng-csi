@@ -1,9 +1,9 @@
-# Default values for kube-xcpng-csi.
+# Default values for xcpng-csi.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
 image:
-    repository: arturoguerra/xcpng-csi
+    repository: matt0x6f/xcpng-csi
     #    tag: latest
 
 ## service account to use (if necessary)

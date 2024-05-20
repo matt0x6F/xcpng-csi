@@ -12,7 +12,7 @@ import (
 )
 
 /*
-NodeID is passed as an env variable though the downwards api.
+NodeID is passed as an env variable through the downwards api.
 
 NOTE: Its important that the node hostname and the xcp-ng vm name are the same for attachment to work, this may be configurable in the future though the config file located in the node
 */
@@ -37,7 +37,8 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Info("Starting GoCSI for XCP-ng...")
+	log.Info("Starting CSI for XCP-ng...")
+
 	gocsi.Run(
 		context.Background(),
 		service.Name,

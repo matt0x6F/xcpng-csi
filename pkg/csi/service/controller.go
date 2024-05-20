@@ -14,7 +14,6 @@ GetCapacity
 import (
 	"context"
 	"math/rand"
-	"time"
 
 	"github.com/arturoguerra/xcpng-csi/pkg/errs"
 	"github.com/container-storage-interface/spec/lib/go/csi"
@@ -72,8 +71,6 @@ func (s *service) CreateVolume(ctx context.Context, req *csi.CreateVolumeRequest
 
 	if zoneRequirements != nil {
 		var topologies *csi.Topology
-
-		rand.Seed(time.Now().UnixNano())
 
 		if len(zoneRequirements.Preferred) > 0 {
 			idx := rand.Intn(len(zoneRequirements.Requisite) - 0)

@@ -1,7 +1,6 @@
 package config
 
 import (
-	"io/ioutil"
 	"os"
 
 	"github.com/arturoguerra/xcpng-csi/internal/structs"
@@ -17,7 +16,7 @@ func Load() (*structs.Config, error) {
 		ClusterID: os.Getenv("CLUSTER_ID"),
 	}
 
-	yamlFile, err := ioutil.ReadFile(configLocation)
+	yamlFile, err := os.ReadFile(configLocation)
 	if err != nil {
 		return nil, err
 	}

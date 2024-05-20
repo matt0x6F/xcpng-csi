@@ -31,7 +31,7 @@ func (c *xClient) Attach(volID, nodeID, fstype string) (string, error) {
 
 	// we have more than one VBD for VDI so something is wrong
 	if len(vbds) > 1 {
-		return "", errors.New("Too much VBDs, something is wrong")
+		return "", errors.New("Too many VBDs, something is wrong")
 	}
 
 	// if we have no VBDs for VDI, we should attach
@@ -43,7 +43,7 @@ func (c *xClient) Attach(volID, nodeID, fstype string) (string, error) {
 			return "", err
 		}
 
-		// TODO: maybe give some time for VBD to become available
+		// TODO: maybe give some time for VBD to become available with exponential backoff
 		// time.Sleep(5)
 
 		// restart attachment procedure
@@ -67,6 +67,8 @@ func (c *xClient) Attach(volID, nodeID, fstype string) (string, error) {
 
 	// return device to mount
 	dev := fmt.Sprintf("/dev/%s", vbd.Device)
+
 	log.Infof("Attached dev: %s, VDI: %s to VM: %s", dev, vdi.UUID, vm.UUID)
+
 	return dev, nil
 }
