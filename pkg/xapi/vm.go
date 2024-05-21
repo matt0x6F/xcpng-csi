@@ -2,7 +2,8 @@ package xapi
 
 import (
 	"errors"
-	"github.com/arturoguerra/go-xolib/pkg/xoclient"
+
+	"github.com/matt0x6f/xcpng-csi/pkg/xoclient"
 )
 
 // return Xen VM reference for specified node

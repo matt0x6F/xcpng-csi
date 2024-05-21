@@ -2,9 +2,9 @@ package xapi
 
 import (
 	"github.com/arturoguerra/go-logging"
-	"github.com/arturoguerra/go-xolib/pkg/xoclient"
-	"github.com/arturoguerra/go-xolib/pkg/xolib"
-	"github.com/arturoguerra/xcpng-csi/internal/structs"
+	"github.com/matt0x6f/xcpng-csi/internal/structs"
+	"github.com/matt0x6f/xcpng-csi/pkg/xoclient"
+	"github.com/matt0x6f/xcpng-csi/pkg/xolib"
 )
 
 var log = logging.New()

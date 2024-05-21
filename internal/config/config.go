@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	"github.com/arturoguerra/xcpng-csi/internal/structs"
+	"github.com/matt0x6f/xcpng-csi/internal/structs"
 	"gopkg.in/yaml.v2"
 )
 

@@ -1,8 +1,8 @@
 package xapi
 
 import (
-	"github.com/arturoguerra/go-xolib/pkg/xoclient"
-	"github.com/arturoguerra/xcpng-csi/internal/structs"
+	"github.com/matt0x6f/xcpng-csi/internal/structs"
+	"github.com/matt0x6f/xcpng-csi/pkg/xoclient"
 )
 
 // GetZoneByLabel get zone based on region and zone labels

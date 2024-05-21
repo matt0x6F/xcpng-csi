@@ -4,7 +4,7 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/arturoguerra/go-xolib/pkg/xoclient"
+	"github.com/matt0x6f/xcpng-csi/pkg/xoclient"
 )
 
 // Attach attaches volume to node

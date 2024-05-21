@@ -1,7 +1,7 @@
 package xapi
 
 import (
-	"github.com/arturoguerra/go-xolib/pkg/xoclient"
+	"github.com/matt0x6f/xcpng-csi/pkg/xoclient"
 )
 
 func (c *xClient) IsAttached(volID, nodeID string) (bool, error) {

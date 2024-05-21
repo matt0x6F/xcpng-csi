@@ -1,6 +1,6 @@
 package xapi
 
-import "github.com/arturoguerra/go-xolib/pkg/xoclient"
+import "github.com/matt0x6f/xcpng-csi/pkg/xoclient"
 
 func (c *xClient) DeleteVolume(volID string) error {
 	vdiRef := xoclient.VDIRef(volID)

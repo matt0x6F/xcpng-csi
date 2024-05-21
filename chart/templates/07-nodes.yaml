@@ -30,11 +30,11 @@ spec:
           args:
             - "-v=10"
             - "--csi-address=/csi/csi.sock"
-            - "--kubelet-registration-path={{ template "varDir" . }}/lib/kubelet/plugins/csi.xcpng.arturonet.com/csi.sock"
+            - "--kubelet-registration-path={{ template "varDir" . }}/lib/kubelet/plugins/csi.xcpng.ooo-yay.com/csi.sock"
           lifecycle:
             preStop:
               exec:
-                command: ["/bin/sh", "-c", "rm -rf /registration/csi.xcpng.arturonet.com /registration/csi.xcpng.arturonet.com-reg.sock"]
+                command: ["/bin/sh", "-c", "rm -rf /registration/csi.xcpng.ooo-yay.com /registration/csi.xcpng.ooo-yay.com-reg.sock"]
           volumeMounts:
             - name: socket-dir
               mountPath: /csi
@@ -97,7 +97,7 @@ spec:
             type: DirectoryOrCreate
         - name: socket-dir
           hostPath:
-            path: {{ template "varDir" . }}/lib/kubelet/plugins/csi.xcpng.arturonet.com
+            path: {{ template "varDir" . }}/lib/kubelet/plugins/csi.xcpng.ooo-yay.com
             type: DirectoryOrCreate
         - name: mountpoint-dir
           hostPath:

@@ -1,6 +1,6 @@
 package structs
 
-import "github.com/arturoguerra/go-xolib/pkg/xoclient"
+import "github.com/matt0x6f/xcpng-csi/pkg/xoclient"
 
 type (
 	// Credentials struct: Login credentials for a specific region
